@@ -1,0 +1,25 @@
+services:
+  php:
+    build:
+      context: ./docker/php
+    volumes:
+      - ./:/var/www/html
+    depends_on:
+      - mysql
+    ports:
+      - "8080:80"
+
+  mysql:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: user_db
+      MYSQL_USER: app_user
+      MYSQL_PASSWORD: app_password
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+volumes:
+  mysql_data: 

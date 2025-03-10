@@ -1,0 +1,14 @@
+{
+    "name": "farriagadal/pruebatecnica_docfav",
+    "description": "Prueba técnica Docfav",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "require": {
+        "php": "^8.1",
+        "doctrine/orm": "^2.11"
+    }
+} 
