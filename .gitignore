@@ -1,13 +1,10 @@
 # Default php - docker projecto gitignore
 /vendor/
 # /composer.lock
-
-# -- 2. Ignorar archivos de configuración sensibles --
-/.env
+# /.env
 /.env.local
 /.env.*.local
 
-# -- 3. Ignorar archivos de logs --
 *.log
 /logs
 /log
